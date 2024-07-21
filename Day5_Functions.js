@@ -58,6 +58,7 @@ console.log(greeting("jack", 85));
 
 
 //Activity 5
+//Task 9
 function higherOrderFn(fun, num){
     while(num >= 0){
         fun();
@@ -66,3 +67,22 @@ function higherOrderFn(fun, num){
 }
 function fun(){console.log("Function is called");}
 higherOrderFn(fun, 4);
+
+//Task 10
+function applyFunctions(func1, func2, value) {
+    return func2(func1(value));
+}
+
+
+function double(x) {
+    return x * 2;
+}
+
+function square(x) {
+    return x * x;
+}
+
+const value = 5;
+const result = applyFunctions(double, square, value);
+
+console.log(result);
