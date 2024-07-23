@@ -16,3 +16,12 @@ arr.shift()
 console.log(`New array after shift : ${arr}`);
 arr.unshift(1);
 console.log(`New array after unshift : ${arr}`);
+
+//Activity 3
+//Task4
+
+let numbers = [1, 2, 3, 4, 5]; 
+let square = numbers.map(number => {
+  return number * number;
+});
+console.log(square);
