@@ -18,10 +18,14 @@ arr.unshift(1);
 console.log(`New array after unshift : ${arr}`);
 
 //Activity 3
-//Task4
+//Task7
 
 let numbers = [1, 2, 3, 4, 5]; 
 let square = numbers.map(number => {
   return number * number;
 });
 console.log(square);
+
+//Task8
+let even = numbers.filter(num => num % 2 === 0)
+console.log(even);
