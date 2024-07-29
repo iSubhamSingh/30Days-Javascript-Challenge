@@ -51,3 +51,29 @@ console.log(`Product without second parameter : ${product(4)}`);
 
 //Activity 5
 //Task 8
+const email = "email@gmail.com";
+const uid = 12345;
+
+const obj = {
+   email,
+   uid,
+   display: function(){
+    return `${this.email}  , ${this.uid}`;
+   }
+}
+
+console.log(obj);
+console.log(obj.display());
+
+//Task 9
+const bookName = "Name of book";
+const genre = "Book genre";
+const authorName = "Name of the author";
+
+const bookDetail = {
+    [bookName]: "Harry Potter",
+    [genre]: "Fiction",
+    [authorName]: "J.K Rowling"
+}
+
+console.log(bookDetail);
