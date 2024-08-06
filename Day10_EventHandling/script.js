@@ -12,3 +12,10 @@ img.addEventListener('dblclick', () => {
 
 })
 
+//Task 3
+document.getElementById('para').addEventListener('mouseover', () => {
+    document.getElementById('para').style.color = 'red';
+})
+
+//Task 4
+document.getElementById('para').addEventListener()
