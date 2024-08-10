@@ -1,4 +1,4 @@
-//Activity
+//Activity 1
 
 //Task 1
 
@@ -22,4 +22,39 @@ const promise2 = new Promise((_, reject) => {
 
 promise2.catch((error) => {
   console.log(error);
+});
+
+
+//Activity 2
+//Task 3
+
+const fetchData1 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Resolved first promise");
+  }, 1000);
+});
+
+const fetchData2 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Resolved second promise");
+  }, 2000);
+});
+
+const fetchData3 = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Resolved third promise");
+  }, 3000);
+});
+
+fetchData1
+  .then((message) => {
+    console.log(message);
+    return fetchData2;
+})
+  .then((message) => {
+    console.log(message);
+    return fetchData3;
+})
+  .then((message) => {
+    console.log(message);
 });
