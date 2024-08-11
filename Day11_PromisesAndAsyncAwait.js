@@ -58,3 +58,21 @@ fetchData1
   .then((message) => {
     console.log(message);
 });
+
+
+
+//Activity 3
+//Task 4
+
+async function asyncFunction1() {
+  const promise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Promise resolved after 2 seconds for task 4");
+    }, 2000);
+  });
+
+  const result = await promise;
+  console.log(result);
+}
+
+asyncFunction1();
