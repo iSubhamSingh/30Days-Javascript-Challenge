@@ -76,3 +76,24 @@ async function asyncFunction1() {
 }
 
 asyncFunction1();
+
+
+
+//Task 5
+
+async function asyncFunction2() {
+  const promise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject("Task 5: Promise rejected");
+    }, 2000);
+});
+
+  try {
+    const result = await promise;
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+asyncFunction2();
