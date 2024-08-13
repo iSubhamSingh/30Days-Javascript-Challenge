@@ -97,3 +97,15 @@ async function asyncFunction2() {
 }
 
 asyncFunction2();
+
+//Activity 4
+//Task 6
+
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => {
+    console.log("Resolved promise from fetch", data);
+})
+  .catch(error => {
+    console.error(error);
+});
