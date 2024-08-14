@@ -109,3 +109,20 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
   .catch(error => {
     console.error(error);
 });
+
+
+
+//Task 7
+//Task-7:Use the fetch API to get data from a public API and log the response data to the console using async/await.
+
+async function fetchData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    console.log("Data fetched using fetch api", data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();
