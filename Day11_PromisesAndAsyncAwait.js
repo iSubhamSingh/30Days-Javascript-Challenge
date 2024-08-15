@@ -113,7 +113,6 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 
 
 //Task 7
-//Task-7:Use the fetch API to get data from a public API and log the response data to the console using async/await.
 
 async function fetchData() {
   try {
@@ -126,3 +125,15 @@ async function fetchData() {
 }
 
 fetchData();
+
+
+//Activity 5
+//Task 8
+
+const promiseA = new Promise((resolve) => setTimeout(() => resolve("Promise A resolved"), 1000));
+const promiseB = new Promise((resolve) => setTimeout(() => resolve("Promise B resolved"), 2000));
+const promiseC = new Promise((resolve) => setTimeout(() => resolve("Promise C resolved"), 3000));
+
+Promise.all([promiseA, promiseB, promiseC]).then((values) => {
+  console.log("All promises resolved", values);
+});
