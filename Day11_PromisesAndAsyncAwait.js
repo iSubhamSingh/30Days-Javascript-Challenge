@@ -137,3 +137,15 @@ const promiseC = new Promise((resolve) => setTimeout(() => resolve("Promise C re
 Promise.all([promiseA, promiseB, promiseC]).then((values) => {
   console.log("All promises resolved", values);
 });
+
+
+//Task 9
+
+
+const promiseX = new Promise((resolve) => setTimeout(() => resolve("Promise X resolved"), 1000));
+const promiseY = new Promise((resolve) => setTimeout(() => resolve("Promise Y resolved"), 2000));
+const promiseZ = new Promise((resolve) => setTimeout(() => resolve("Promise Z resolved"), 3000));
+
+Promise.race([promiseX, promiseY, promiseZ]).then((value) => {
+  console.log("Promise resolved for task 9", value);
+});
