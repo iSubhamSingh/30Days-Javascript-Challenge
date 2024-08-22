@@ -116,7 +116,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 
 async function fetchData() {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/2');
     const data = await response.json();
     console.log("Data fetched using fetch api", data);
   } catch (error) {
@@ -142,9 +142,9 @@ Promise.all([promiseA, promiseB, promiseC]).then((values) => {
 //Task 9
 
 
-const promiseX = new Promise((resolve) => setTimeout(() => resolve("Promise X resolved"), 1000));
-const promiseY = new Promise((resolve) => setTimeout(() => resolve("Promise Y resolved"), 2000));
-const promiseZ = new Promise((resolve) => setTimeout(() => resolve("Promise Z resolved"), 3000));
+const promiseFirst = new Promise((resolve) => setTimeout(() => resolve(" First promise resolved"), 1000));
+const promiseSecond = new Promise((resolve) => setTimeout(() => resolve("Second promise resolved"), 2000));
+const promiseThird = new Promise((resolve) => setTimeout(() => resolve("Third promise resolved"), 3000));
 
 Promise.race([promiseX, promiseY, promiseZ]).then((value) => {
   console.log("Promise resolved for task 9", value);
